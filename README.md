@@ -243,7 +243,3 @@ If developed further, improvements could include:
 **Abhishek Chaudhary**
 
 GitHub: https://github.com/py-abhishek
-
----
-
-⭐ This project represents an important part of my Python learning journey and my progression toward backend development.
