@@ -41,7 +41,7 @@ class PasswordManager(ReadJson):
         self.url = "http://127.0.0.1:8000/"
 
     # Add Password
-    def addPassword(self, platform, username, password):
+    def add_password(self, platform, username, password):
         data = {"platform": platform, "username": username, "password": password}
         response = requests.post(self.url+"add-password",json=data)
         return response.json()

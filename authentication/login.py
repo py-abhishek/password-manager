@@ -10,7 +10,7 @@ class LogIn(SignUp):
         print("--- Log In ---")
 
         while True:
-            credentials = self.getCredentials()
+            credentials = self.get_credentials()
             authentication_success = self.authentication(credentials["username"], credentials["password"])
 
             if (authentication_success):
@@ -22,7 +22,7 @@ class LogIn(SignUp):
             if usr_choice == 1:
                 continue
             elif usr_choice == 2:
-                return self.signUp()
+                return self.sign_up()
             
     
     def authenticate(self, username, password):

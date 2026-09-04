@@ -6,18 +6,18 @@ class SignUp(Authentication):
         super().__init__(auth_file)
 
     # Ask for user credentials
-    def getCredentials(self):
+    def get_credentials(self):
         username = input("Enter username: ").strip()
         password = input("Enter Password: ").strip()
         return {"username": username, "password": password}
 
-    def signUp(self):
+    def sign_up(self):
         print("--- Sign Up ---")
-        credentials = self.getCredentials()
+        credentials = self.get_credentials()
         self.save_credentials(credentials)
         
     def save_credentials(self, credentials:dict):
-        hash_pass = self.hashPass.hashPassword(credentials.get('password'))
+        hash_pass = self.hashPass.hash_password(credentials.get('password'))
         credentials['password'] = hash_pass
         try:
             with open(self.auth_file, "w") as f:

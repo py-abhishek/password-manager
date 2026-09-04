@@ -40,7 +40,7 @@ class AddPassword(ctk.CTkFrame):
             self.info_label.configure(text="Username and Password fields are required")
         else:
             enc_pass = encryption.encryptPass(password) # Encrypt Password
-            response = passwordManager.addPassword(platform, username, enc_pass)
+            response = passwordManager.add_password(platform, username, enc_pass)
             if response['success'] == True:
                 msg = "Password Added Successfully"
                 self.info_label.configure(text=msg)

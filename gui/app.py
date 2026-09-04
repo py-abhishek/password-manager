@@ -76,9 +76,9 @@ class LoginScreen(ctk.CTkFrame):
         username = self.username.get().strip()
         password = self.password.get()
 
-        # if LogIn().authenticate(username, password):
-        self.controller.showScreen('dashboardscreen')
-        # else: print("Invalid Credentials!")
+        if LogIn().authenticate(username, password):
+            self.controller.showScreen('dashboardscreen')
+        else: print("Invalid Credentials!")
 
         print('LogIn')
     

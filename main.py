@@ -66,7 +66,7 @@ def initialize():
 
                 # Encrypt Password
                 enc_pass_str = encryption.encryptPass(password)
-                response = passwordManager.addPassword(platform_name, usr_name, enc_pass_str)
+                response = passwordManager.add_password(platform_name, usr_name, enc_pass_str)
                 if response['success'] == True:
                     print("Password Added Successfully!")
                 else: print("Error while adding password!")
